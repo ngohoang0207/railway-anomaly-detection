@@ -58,7 +58,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_path',
                         type=str,
-                        default="/path/to/Railsem19Croppedv1",
+                        default="/kaggle/working/railsem19_cropped",
                         help='path to the directory structure to be stored as hdf5 file')
     parser.add_argument('--output_name',
                         type=str,
