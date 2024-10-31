@@ -262,15 +262,15 @@ if __name__ == "__main__":
     MODE = "fishyrails"  # "rs19" or "fishyrails"
 
     if MODE == "rs19":
-        IMAGE_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/")  # jpg
+        IMAGE_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/jpgs/rs19_val")  # jpg
         IMAGE_EXTENSION = ".jpg"
-        SEG_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/")  # png
+        SEG_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/jsons/rs19_val")  # png
         SEG_EXTENSION = ".png"
-        JSON_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/")  # json
+        JSON_PATH = os.path.join(args.input_path, "/kaggle/input/railsem19/uint8/rs19_val")  # json
         JSON_EXTENSION = ".json"
-        OUTPUT_PATH = os.path.join(args.output_path, "images")
-        OUTPUT_MASK_PATH = os.path.join(args.output_path, "masks")
-        VISUALIZATION_PATH = os.path.join(args.output_path, "visualizations")
+        OUTPUT_PATH = os.path.join(args.output_path, "/kaggle/working/images")
+        OUTPUT_MASK_PATH = os.path.join(args.output_path, "/kaggle/working/masks")
+        VISUALIZATION_PATH = os.path.join(args.output_path, "/kaggle/working/visualizations")
         DENSE_LABELS_PATH = os.path.join(os.getcwd(), "/kaggle/input/railsem19/rs19-config.json")
     elif MODE == "fishyrails":
         IMAGE_PATH = os.path.join(args.input_path, "fishy")  # png
