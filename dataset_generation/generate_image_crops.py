@@ -274,7 +274,7 @@ if __name__ == "__main__":
         DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19-config.json")
     elif MODE == "fishyrails":
         IMAGE_PATH = os.path.join(args.input_path, "jpgs/rs19_val")  # png
-        IMAGE_EXTENSION = ".png"
+        IMAGE_EXTENSION = ".jpg"
         SEG_PATH = os.path.join(args.input_path, "uint8/rs19_val")  # png
         SEG_EXTENSION = ".png"
         IMAGE_ORIG_PATH = os.path.join(args.input_path, "orig")  # png
