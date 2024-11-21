@@ -6,9 +6,9 @@ from PIL import Image
 
 def main(args):
     # load all image files, sorting them to ensure that they are aligned
-    im_path = os.path.join(args.input_path, "images")
+    im_path = os.path.join(args.input_path, "images_fishy")
     images = [os.path.join(im_path, image) for image in sorted(os.listdir(im_path))]
-    mask_path = os.path.join(args.input_path, "masks")
+    mask_path = os.path.join(args.input_path, "masks_fishy")
     masks = [os.path.join(mask_path, mask) for mask in sorted(os.listdir(mask_path))]
     if len(masks) != len(images):
         print(f"ATTENTION: {len(images)} images but {len(masks)} masks!")
