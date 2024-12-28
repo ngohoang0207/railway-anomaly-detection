@@ -17,8 +17,8 @@ def main(args):
     if not os.path.exists(VISUALIZATION_PATH):
         os.makedirs(VISUALIZATION_PATH)
     if MODE == "fishyrails":
-        if not os.path.exists(OUTPUT_ORIG_PATH):
-            os.makedirs(OUTPUT_ORIG_PATH)
+        if not os.path.exists(OUTPUT_MASK_PATH):
+            os.makedirs(OUTPUT_MASK_PATH)
         if not os.path.exists(OUTPUT_ORIG_MASK_PATH):
             os.makedirs(OUTPUT_ORIG_MASK_PATH)
 
@@ -76,7 +76,7 @@ def main(args):
 
         if MODE == "fishyrails":
             for idx, crop in enumerate(cropped_orig_images):
-                cv2.imwrite(os.path.join(OUTPUT_ORIG_PATH, f"{image_name}_{idx:02}.png"), crop)
+                cv2.imwrite(os.path.join(OUTPUT_MASK_PATH, f"{image_name}_{idx:02}.png"), crop)
             for idx, crop in enumerate(cropped_orig_segmentations):
                 cv2.imwrite(os.path.join(OUTPUT_ORIG_MASK_PATH, f"{image_name}_{idx:02}.png"), crop)
         counter += 1
