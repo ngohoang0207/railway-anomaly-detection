@@ -68,9 +68,9 @@ def main(args):
         if MODE == "rs19":
     visualization_image, cropped_images, cropped_segmentations, _, _, frame \
         = create_image_crops(args, json_data, image, seg)
-        if MODE == "rs19":
-    visualization_image, cropped_images, cropped_segmentations, _, _, frame \
-        = create_image_crops(args, json_data, image, seg)
+        elif MODE == "fishyrails":
+    visualization_image, cropped_images, cropped_segmentations, cropped_orig_images, cropped_orig_segmentations, frame \
+        = create_image_crops(args, json_data, image, seg, image_orig, seg_orig)
         # visualization_image, cropped_images, cropped_segmentations, cropped_orig_images, cropped_orig_segmentations, frame \
         #     = create_image_crops(args, json_data, image, seg, image_orig, seg_orig)
         # Store visualization and visualization_image crops
