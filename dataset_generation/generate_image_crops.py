@@ -259,7 +259,7 @@ if __name__ == "__main__":
                         default="/path/to/rs19_val",
                         help='rs19_val or fishyrails directory')
     args = parser.parse_args()
-    MODE = "fishyrails"  # "rs19" or "fishyrails"
+    # MODE = "fishyrails"  # "rs19" or "fishyrails" MODE = args.mode
 
     if MODE == "rs19":
         IMAGE_PATH = os.path.join(args.input_path, "jpgs/rs19_val")  # jpg
@@ -271,7 +271,7 @@ if __name__ == "__main__":
         OUTPUT_PATH = os.path.join(args.output_path, "images")
         OUTPUT_MASK_PATH = os.path.join(args.output_path, "masks")
         VISUALIZATION_PATH = os.path.join(args.output_path, "visualizations")
-        DENSE_LABELS_PATH = os.path.join(os.getcwd(), "/kaggle/input/railsem19/rs19-config.json")
+        DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
     elif MODE == "fishyrails":
         IMAGE_PATH = os.path.join(args.input_path, "fishy")  # png
         IMAGE_EXTENSION = ".png"
