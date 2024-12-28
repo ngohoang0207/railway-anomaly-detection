@@ -259,7 +259,7 @@ if __name__ == "__main__":
                         default="/path/to/rs19_val",
                         help='rs19_val or fishyrails directory')
     args = parser.parse_args()
-    # MODE = "fishyrails"  # "rs19" or "fishyrails" MODE = args.mode
+    MODE = args.mode # MODE = "fishyrails"  # "rs19" or "fishyrails" 
 
     if MODE == "rs19":
         IMAGE_PATH = os.path.join(args.input_path, "jpgs/rs19_val")  # jpg
