@@ -57,7 +57,7 @@ def main(args):
         json_path = os.path.join(JSON_PATH, f"{image_name}{JSON_EXTENSION}")
         image = cv2.imread(image_path)
         seg = cv2.imread(seg_path, 0)  # grayscale mode
-        if MODE == "fishyrails":
+        if MODE == "rs19":
             image_orig_path = os.path.join(IMAGE_ORIG_PATH, f"{image_name}{IMAGE_ORIG_EXTENSION}")
             seg_orig_path = os.path.join(SEG_ORIG_PATH, f"{image_name}{SEG_ORIG_EXTENSION}")
             image_orig = cv2.imread(image_orig_path)
