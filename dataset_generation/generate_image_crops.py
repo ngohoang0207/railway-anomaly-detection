@@ -271,7 +271,8 @@ if __name__ == "__main__":
         OUTPUT_PATH = os.path.join(args.output_path, "images")
         OUTPUT_MASK_PATH = os.path.join(args.output_path, "masks")
         VISUALIZATION_PATH = os.path.join(args.output_path, "visualizations")
-        DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
+        # DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
+        DENSE_LABELS_PATH = "/kaggle/input/railsem19/rs19-config.json"
     elif MODE == "fishyrails":
         IMAGE_PATH = os.path.join(args.input_path, "fishy")  # png
         IMAGE_EXTENSION = ".png"
@@ -288,5 +289,6 @@ if __name__ == "__main__":
         OUTPUT_ORIG_PATH = os.path.join(args.output_path, "images_orig")
         OUTPUT_ORIG_MASK_PATH = os.path.join(args.output_path, "masks_orig")
         VISUALIZATION_PATH = os.path.join(args.output_path, "visualizations")
-        DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
+        # DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
+        DENSE_LABELS_PATH = "/kaggle/input/railsem19/rs19-config.json"
     main(args)
