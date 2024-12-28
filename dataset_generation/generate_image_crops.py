@@ -57,7 +57,7 @@ def main(args):
         json_path = os.path.join(JSON_PATH, f"{image_name}{JSON_EXTENSION}")
         image = cv2.imread(image_path)
         seg = cv2.imread(seg_path, 0)  # grayscale mode
-        if MODE == "rs19":
+        if MODE == "fishyrails":
             image_orig_path = os.path.join(IMAGE_ORIG_PATH, f"{image_name}{IMAGE_ORIG_EXTENSION}")
             seg_orig_path = os.path.join(SEG_ORIG_PATH, f"{image_name}{SEG_ORIG_EXTENSION}")
             image_orig = cv2.imread(image_orig_path)
@@ -259,7 +259,7 @@ if __name__ == "__main__":
                         default="/path/to/rs19_val",
                         help='rs19_val or fishyrails directory')
     args = parser.parse_args()
-    MODE = "rs19"  # "rs19" or "fishyrails"
+    MODE = "fishyrails"  # "rs19" or "fishyrails"
 
     if MODE == "rs19":
         IMAGE_PATH = os.path.join(args.input_path, "jpgs/rs19_val")  # jpg
@@ -271,8 +271,7 @@ if __name__ == "__main__":
         OUTPUT_PATH = os.path.join(args.output_path, "images")
         OUTPUT_MASK_PATH = os.path.join(args.output_path, "masks")
         VISUALIZATION_PATH = os.path.join(args.output_path, "visualizations")
-        # DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
-        DENSE_LABELS_PATH = "/kaggle/input/railsem19/rs19-config.json"
+        DENSE_LABELS_PATH = os.path.join(os.getcwd(), "rs19_val/rs19-config.json")
     elif MODE == "fishyrails":
         IMAGE_PATH = os.path.join(args.input_path, "fishy")  # png
         IMAGE_EXTENSION = ".png"
