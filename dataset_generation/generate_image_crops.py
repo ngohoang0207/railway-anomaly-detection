@@ -72,7 +72,7 @@ def main(args):
         if counter > args.max_images:
             return 0
 
-def create_image_crops(args, input_json, input_image, input_segmentation, input_orig_image=None, input_orig_segmentation=None):
+def create_image_crops(args, input_json, input_image, input_segmentation, input_orig_image, input_orig_segmentation):
     # Create visualization visualization_image copy and empty cropped images list
     visualization_image = input_image.copy()
     cropped_images = list()
@@ -111,6 +111,18 @@ def crop_images_from_rails(visualization_image, raw_image, segmentation_mask, or
     connection_col = (0, 0, 0)
 
     midpoints, distances, short, long, _ = compute_midpoints(coords)
+
+    # If desired: Discard rails too far from the lower image center (only keep main rails)
+    if args.main_rail_only:
+        is_main_rail = False
+    else:
+        # all rails are main rails
+        is_main_rail = True
+    for midpoint in midpoints:
+        if abs(midpoint[0] - width/2) < width / 6 and height - midpoint[1] < height / 10:
+            is_main_rail = True
+    if not is_main_rail:
+        return
 
     # Visualization: Print connections between corresponding points
     for short, long in zip(short, long):
