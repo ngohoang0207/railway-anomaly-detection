@@ -140,13 +140,13 @@ def crop_images_from_rails(visualization_image, raw_image, segmentation_mask, or
                                                interpolation=cv2.INTER_NEAREST)
                 cropped_segmentations.append(segmentation_crop)
                 orig_image_crop = orig_image[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]]
-                    orig_image_crop = cv2.resize(orig_image_crop, (output_width, int(output_width / crop_aspect_ratio)))
-                    cropped_orig_images.append(orig_image_crop)
+                orig_image_crop = cv2.resize(orig_image_crop, (output_width, int(output_width / crop_aspect_ratio)))
+                cropped_orig_images.append(orig_image_crop)
                 orig_mask_crop = orig_mask[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]]
-                    orig_mask_crop = cv2.resize(orig_mask_crop,
+                orig_mask_crop = cv2.resize(orig_mask_crop,
                                                    (output_width, int(output_width / crop_aspect_ratio)),
                                                    interpolation=cv2.INTER_NEAREST)
-                    cropped_orig_segmentations.append(orig_mask_crop)
+                cropped_orig_segmentations.append(orig_mask_crop)
                 prev_midpoint = midpoint
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
