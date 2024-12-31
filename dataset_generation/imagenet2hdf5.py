@@ -23,6 +23,8 @@ def main(args):
         # Images
         G_images = hdf.create_group('images')
         for idx, image_path in enumerate(images):
+            if args.max_images is not None and idx >= args.max_images:
+                break
             print(f"Processing Image {idx}/{len(images)}")
             image_name = os.path.splitext(os.path.basename(image_path))[0]
             # image_np = np.array(Image.open(image_path))
@@ -50,5 +52,9 @@ if __name__ == "__main__":
                         type=str,
                         default="ImageNet",
                         help='name of output hdf5 file')
+    parser.add_argument('--max_images',
+                    type=int,
+                    default=None,
+                    help='maximum number of images to process')
     args = parser.parse_args()
     main(args)
