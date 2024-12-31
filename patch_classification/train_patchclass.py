@@ -258,9 +258,9 @@ def main(args):
             "epoch": epoch,
             "args": args,
         }
-        if epoch % args.save_freq == 0:
+        # if epoch % args.save_freq == 0:
             utils.save_on_master(checkpoint, os.path.join(args.output_dir, f"model_{epoch}.pth"))
-        utils.save_on_master(checkpoint, os.path.join(args.output_dir, "checkpoint.pth"))
+        # utils.save_on_master(checkpoint, os.path.join(args.output_dir, "checkpoint.pth"))
 
     writer.flush()
 
