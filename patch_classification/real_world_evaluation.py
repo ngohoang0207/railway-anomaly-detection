@@ -68,7 +68,7 @@ CONFIG["students"] = {"model_name": "students",
     }
 
 CONFIG["patchclass"] = {"model_name": "patchclass",
-     "checkpoint_name": "./trained_models/patchclass_21_model_20.pth",
+     "checkpoint_name": "/kaggle/input/patch_diff/pytorch/default/1/model_0.pth",
      "ae_model_name": "none",
      "ae_checkpoint_name": "none",
      "stages": 1,
