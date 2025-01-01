@@ -19,7 +19,7 @@ from torchvision.transforms import functional as F
 
 CONFIG = dict()
 CONFIG["deeplabv3"] = {"model_name": "deeplabv3_resnet50",
-     "checkpoint_name": "./trained_models/deeplabv3_model_5.pth",
+     "checkpoint_name": "/kaggle/input/model_14_patchdiff/pytorch/default/1/model_14.pth",
      "ae_model_name": "none",
      "ae_checkpoint_name": "none",
      "stages": 99,
