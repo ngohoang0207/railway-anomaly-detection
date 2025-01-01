@@ -484,9 +484,9 @@ def get_model(model_name, checkpoint_name, ae_model_name, ae_checkpoint_name, st
                 num_classes=2,
                 aux_loss=False,
             )
-    elif model_name == "patchdiff":
-        model = PatchClassModel(stages=stages, in_channels=6)
     elif model_name == "patchclass":
+        model = PatchClassModel(stages=stages, in_channels=6)
+    elif model_name == "patchdiff":
         model = PatchClassModel(stages=stages, in_channels=3)
 
     else:
