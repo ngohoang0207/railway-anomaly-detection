@@ -326,7 +326,7 @@ def evaluate(args, ae_model, model, data_loader, device, num_classes, vis_path=N
 
                     # Stack horizontally
                     if args.theta_visualize == thr:
-                        img_row = np.hstack((np.asarray(i) for i in visualization_images))
+                        img_row = np.hstack([np.asarray(i) for i in visualization_images])
                         image_final = Image.fromarray(img_row)
                         image_final.save(os.path.join(vis_path, f"Thr{int(thr*100)}_{idx:04}_{mode}_visualization.jpeg"), format="jpeg")
 
