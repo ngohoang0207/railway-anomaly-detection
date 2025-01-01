@@ -21,7 +21,7 @@ CONFIG = dict()
 CONFIG["deeplabv3"] = {"model_name": "deeplabv3_resnet50",
      "checkpoint_name": "/kaggle/input/model_14_patchdiff/pytorch/default/1/model_14.pth",
      "ae_model_name": "none",
-     "ae_checkpoint_name": "none",
+     "ae_checkpoint_name": "/kaggle/input/1/pytorch/default/1/checkpoint.pth",
      "stages": 99,
      "g_act": "tanh",
      "patch_size": 51,
