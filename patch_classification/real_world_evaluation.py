@@ -116,9 +116,9 @@ CONFIG["patchdiff_gan"] = {"model_name": "patchdiff",
     }
 
 CONFIG["patchdiff_gan+hist"] = {"model_name": "patchdiff",
-     "checkpoint_name": "./trained_models/patchdiff_21_gan+hist_model_20.pth",
+     "checkpoint_name": "/kaggle/input/patch_diff/pytorch/default/1/model_0.pth",
      "ae_model_name": "AeSegParam02_8810",
-     "ae_checkpoint_name": "./trained_models/ae_gan+hist_model_199.pth",
+     "ae_checkpoint_name": /kaggle/input/ae_model/pytorch/default/1/checkpoint.pth",
      "stages": 1,
      "g_act": "tanh",
      "threshold": 0.95,
