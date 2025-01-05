@@ -21,7 +21,7 @@ def get_light_module(in_channels, out_channels, log_idx):
     ]
 
 class PatchClassModel(nn.Module):
-    def __init__(self, stages=4, in_channels=6):
+    def __init__(self, stages=4, in_channels=3):
         super(PatchClassModel, self).__init__()
         self.stages = stages
         self.in_channels = in_channels
