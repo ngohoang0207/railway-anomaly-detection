@@ -1,3 +1,4 @@
+
 import datetime
 import os
 import time
@@ -150,7 +151,7 @@ def evaluate(args, epoch, model, data_loader, model_d, criterion_d, device):
                     pred_ae_pil, _ = presets.re_convert_tanh(outputs["out_aa"].cpu(), outputs["out_aa"].cpu())
                 else:
                     pred_ae_pil, _ = presets.re_convert(outputs["out_aa"].cpu(), outputs["out_aa"].cpu())
-                pred_ae_pil.save(os.path.join(args.output_dir, f"image{idx:02d}_test_{epoch:03d}.jpeg"))
+                pred_ae_pil.save(os.path.join(args.output_dir, f"image{idx:02d}_val_epoch_{epoch:03d}.jpeg"))
 
             # Autoencoder
             if args.w_mse > 0:
